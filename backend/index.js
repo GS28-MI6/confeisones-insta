@@ -20,7 +20,7 @@ async function sendMail(texto) {
     auth: {
       // should be replaced with real sender's account
       user: "confesanosloquequieras@gmail.com",
-      pass: "43980650elias",
+      pass: "38167613elias",
     },
   });
   let mailOptions = {
