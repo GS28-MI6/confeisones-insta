@@ -17,7 +17,7 @@ class Home extends Component {
         e.preventDefault();
         var title = this.title.value;
         console.log(title);
-        axios.post('http://localhost:4000/enviarMail', {texto: title});
+        axios.post('http://54.94.81.90:4000/enviarMail', {texto: title});
         this.title.value = "";
     }
 
