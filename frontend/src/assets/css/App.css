@@ -95,28 +95,47 @@ textarea {
     color: #000;
     background-image: url("../images/fondo.png");
     background-repeat: no-repeat;
-    background-size: 200%;
+    background-size: 450%;
     justify-content: center;
     align-items: center;
   }
   .container .area-container {
     display: flex;
-    width: 70%;
-    height: 70%;
+    width: 90%;
+    height: 90%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-image: url("../images/blackMarble.jpg");
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 400%;
     overflow: hidden;
     border-style: solid;
     border-width: 2px;
     border-radius: 20px;
   }
+  .container .logo {
+    margin-top: 25%;
+    width: 70%;
+    height: 15%;
+  }
+  .text-area {
+    padding: 4px;
+    margin-bottom: 25%;
+    width: 70%;
+    height: 30%;
+  }  
+  
+  .text-area .submit-button {
+    width: 35%;
+    height: 20%;
+    font-size: 30px;
+  }
 }
 
-@media (max-width: 800px) {
+
+
+@media screen and (max-width: 500px) {
   textarea {
     padding: 0;
     margin: 0;
@@ -152,7 +171,7 @@ textarea {
   }
 }
 
-@media (max-width: 300px) {
+@media screen and (max-width: 300px) {
   .container {
     display:flex;
     flex-direction: column;
