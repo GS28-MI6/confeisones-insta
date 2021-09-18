@@ -52,6 +52,10 @@ app.post("/enviarMail", (req, res) => {
   }
 });
 
+app.get("/test", (req, res) => {
+    res.status(200).send("ok");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
