@@ -19,13 +19,13 @@ async function sendMail(texto) {
     secure: true,
     auth: {
       // should be replaced with real sender's account
-      user: "gasosa2811@gmail.com",
-      pass: "Y23dD0TOy2811",
+      user: "confesanosloquequieras@gmail.com",
+      pass: "43980650elias",
     },
   });
   let mailOptions = {
     // should be replaced with real recipient's account
-    to: "gasosa2811@gmail.com",
+    to: "confesanosloquequieras@gmail.com",
     subject: "Confesión anonima",
     html:
       "<p>"+ texto +"</p>",
