@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
 
 body {
   padding: 0;
@@ -19,8 +20,8 @@ body {
 
 .container .area-container {
   display: flex;
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -35,8 +36,8 @@ body {
 
 .container .logo {
   margin-top: 5%;
-  width: 50%;
-  height: 35%;
+  width: 40%;
+  height: 25%;
 }
 
 .text-area {
@@ -86,6 +87,42 @@ textarea {
   outline: none;
 }
 
+.container .sent-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Carattere', cursive;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  padding: 4px;
+  margin-bottom: 5%;
+  width: 70%;
+  height: 40%;
+}
+.container .sent-text p{
+  margin: 0;
+  padding-bottom: 5px;
+}
+.container .sent-text .right{
+  text-align: right;
+}
+
+.container .sent-text .return-button {
+  cursor: pointer;
+  width: 25%;
+  height: 40px;
+  bottom: 0%;
+  right: 0%;
+  font-family: "Oswald";
+  font-size: 20px;
+  background-color: #930D0D;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px 0 5px 0;
+  border-color: black;
+}
+
 @media screen and (max-width: 800px) {
   .container {
     display:flex;
@@ -131,6 +168,17 @@ textarea {
     height: 20%;
     font-size: 30px;
   }
+
+  .container .sent-text{
+    font-size: 30px;
+  }
+  
+  .container .sent-text .return-button {
+    cursor: pointer;
+    width: 25%;
+    height: 40px;
+    font-size: 20px;
+  }
 }
 
 
@@ -168,6 +216,15 @@ textarea {
     width: 25%;
     height: 20%;
     font-size: 10px;
+  }
+  .container .sent-text{
+    font-size: 20px;
+  }
+  .container .sent-text .return-button {
+    cursor: pointer;
+    width: 35%;
+    height: 40px;
+    font-size: 12px;
   }
 }
 
@@ -251,5 +308,64 @@ textarea {
     border-width: 2px;
     border-radius: 5px 0 5px 0;
     border-color: black;
+  }
+}
+
+@media screen and (max-height: 700px) {
+
+  .container {
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    color: #000;
+    background-image: url("../images/fondo.png");
+    background-repeat: no-repeat;
+    background-size: 250%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .area-container {
+    width: 80%;
+    height: 80%;
+    background-size: 300%;
+  }
+
+  .container .logo {
+    margin-top: 5%;
+    width: 70%;
+    height: 25%;
+  }
+
+  textarea {
+    padding: 0;
+    margin: 0;
+    color:black;
+    font-size: 12px;
+  }
+
+  .text-area {
+    padding: 4px;
+    margin-bottom: 5%;
+    width: 70%;
+    height: 35%;
+  }
+
+  .text-area .submit-button {
+    position: absolute;
+    cursor: pointer;
+    width: 30%;
+    height: 20%;
+    bottom: 0%;
+    right: 0%;
+    font-family: "Oswald";
+    font-size: 12px;
+  }
+  .container .sent-text{
+    font-size: 20px;
+  }
+  .container .sent-text .return-button {
+    font-size: 10px;
   }
 }
