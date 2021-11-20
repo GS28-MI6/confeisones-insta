@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { addOneToCount, startCount } from "./actions/postActions";
+import {
+    Link
+  } from "react-router-dom";
 import logo from "./assets/images/devilRojo.png";
+import whatsapp from "./assets/images/whatsapp.png";
 import './assets/css/App.css';
 import axios from "axios";
 
@@ -18,7 +22,7 @@ class Home extends Component {
         let title = this.title.value;
         console.log(title);
         if(this.title.value){
-            axios.post('http://ec2-54-94-81-90.sa-east-1.compute.amazonaws.com:4000/enviarMail', {texto: title});
+            //axios.post('http://ec2-54-94-81-90.sa-east-1.compute.amazonaws.com:4000/enviarMail', {texto: title});
             this.title.value = "";
             this.setState({sent: true});
         }
