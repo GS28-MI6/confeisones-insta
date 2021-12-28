@@ -72,7 +72,7 @@ function Home() {
         e.preventDefault();
         console.log("submit: " + genero);
         if(textoConf && genero){
-            axios.post('http://localhost:4000/enviarMail', {texto: textoConf, genero: genero});
+            axios.post('http://www.confesanosloquequieras.com.ar:4000/enviarMail', {texto: textoConf, genero: genero});
             confesionGenero.current = "";
             confesionTexto.current = "";
             setStage("last");
