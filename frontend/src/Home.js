@@ -7,13 +7,15 @@ import Select from "react-select"
 
 function Home() {
     const [stage, setStage] = useState("first");
-    const [textoConf, setTexto] = useState("first");
-    const [genero, setGenero] = useState("first");
+    const [textoConf, setTexto] = useState("");
+    const [genero, setGenero] = useState("");
+    const [hasGenero, setHasGenero] = useState(false);
 
 
 
     const confesionTexto = useRef();
     const confesionGenero = useRef();
+    
 
     const customStyles = {
         option: (provided, state) => ({
@@ -90,7 +92,7 @@ function Home() {
     }
 
     const handleSelectChange = (e) => {
-        console.log(e)
+        setHasGenero(true);
         setGenero(e.value);
     }
 
@@ -126,7 +128,7 @@ function Home() {
                 return (
                     <form className="text-area selector">
                             <Select options={options} styles={customStyles} onChange={(e) => handleSelectChange(e)} name="genero" placeholder={"Selecciona un genero..."} className="select"/>
-                            <button type="button" onClick={(e) => onSubmit(e)} className="submit-button"> Enviar</button>
+                            <button type="button" disabled={!hasGenero} onClick={(e) => onSubmit(e)} className="submit-button"> Enviar</button>
                     </form>
                 );
             case "last":
